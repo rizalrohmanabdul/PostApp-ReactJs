@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../Assets/LeftBar.css';
+import { Link, Redirect } from 'react-router-dom';
 import swal from 'sweetalert';
 import ModalAdd from '../Components/ModalAdd';
 
@@ -24,9 +25,9 @@ class LeftBar extends Component {
                 <a href="/">
                     <img className='iconSendok' src='https://res.cloudinary.com/dbhwvh1mf/image/upload/v1567579575/img/fork_eixcjp.png' />
                 </a>
-                <a href="/history">
+                <Link to="/history">
                     <img className='iconList' src='https://res.cloudinary.com/dbhwvh1mf/image/upload/v1567579578/img/clipboard_tq1syf.png' />
-                </a>
+                </Link>
                 <ModalAdd />
                 <a onClick={del.bind(this)}>
                     <img className='logout' src='https://res.cloudinary.com/dbhwvh1mf/image/upload/v1567582291/img/logoutt_qqf1er.png' />
